@@ -1,7 +1,16 @@
-myName = input("What is your name?\n")
+import random
 
-if myName == "Mike":
-    print("Hello" + " " + myName)
-    print("How are you today?")
+computerChoice = random.choice(['scissors','rock','paper'])
+
+userChoice = input("Do you want rock, paper, or scissors?\n")
+
+if computerChoice == userChoice:
+    print('TIE')
+elif userChoice == 'rock' and computerChoice == 'scissors':
+    print('WIN')
+elif userChoice == 'paper' and computerChoice == 'rock':
+    print('WIN')
+elif userChoice == 'scissors' and computerChoice == 'paper':
+    print('WIN')
 else:
-    print("You're not Mike!")
+    print('LOSE')
